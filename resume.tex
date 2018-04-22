@@ -1,0 +1,153 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{helvet}
+
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75, top=2cm, bottom=1cm]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Andrew}{Branch}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+%\address{101 Polk St}{Unit 910}{San Francisco, CA 94102}
+%\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fax]{+3~(456)~789~012}
+\email{andrew.branch@microsoft.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\social[github]{andrewbranch}
+\social[linkedin]{andrewcbranch}                        % optional, remove / comment the line if not wanted
+\social[twitter]{atcb}                             % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+\nopagenumbers
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-2\baselineskip}
+
+\section{Education}
+	\cventry{2010--2014}{Bachelor of Electrical Engineering}{Auburn University}{Auburn, AL}{}{}  % arguments 3 to 6 can be left empty
+
+\section{Work Experience}
+	\cventry{July~2016--Present}{Software Engineer}{Microsoft}{San Francisco, CA}{}{
+	\begin{itemize}%
+		\item Built and designed APIs for dozens of React components forming the basis of VS Mobile Center's UI
+		\item Wrote detailed documentation, created example apps, and gave an online training to outline best practices for frontend architecture with React and CSS Modules
+	\end{itemize}}
+
+	\cventry{March~2015--June~2016}{Full Stack Web Developer}{Xamarin}{San Francisco, CA}{}{
+	\begin{itemize}%
+		\item Create web apps enabling self-service updates to xamarin.com by various teams
+		\item Create and manage web infrastructure to improve scalability, reliability, performance, and developer workflow for sites with millions of visitors
+		\item Help lead Xamarin to an acquisition by Microsoft in March 2016
+	\end{itemize}}
+
+	\cventry{October~2014--January~2015}{iOS + Web Developer}{Freelance work}{Pensacola, FL}{}{
+	\begin{itemize}%
+		\item Design and code a production-ready iPhone app for multiple screen sizes with Swift
+		\item Design an attractive icon set for use within the app
+		\item Use Node.js and Ember.js to build an interactive web application
+	\end{itemize}}
+
+	\cventry{August~2013--May~2014}{Full Stack Web Developer}{Auburn University}{Auburn, AL}{}{
+		\begin{itemize}%
+			\item Interface with clients to generate list of technical requirements and project specifications
+			\item Write data-heavy web applications using C\# and the Microsoft's ASP.NET MVC framework
+			\item Leverage modern web technologies such as HTML5, JavaScript, and CSS3 to create attractive, intuitive, and responsive user interfaces
+		\end{itemize}}
+
+	\cventry{June~2013--October~2013}{Web Developer}{Freelance work}{Auburn, AL}{}{
+		\begin{itemize}%
+			\item Build dynamic and static sites with Ruby on Rails, HTML5, JavaScript, and CSS3
+			\item Incorporate external developer APIs from Google and Instagram
+			\item Create secure administrator management interfaces
+			\item Use source control and multiple environments to prevent data loss and provide smooth transitions between updates to live sites
+		\end{itemize}}
+
+\section{Key Skills}
+	\begin{minipage}[t]{0.6\textwidth}
+		\cvitem{Frontend Development}{\small
+			\begin{itemize}
+				\item React
+				\item CSS Modules
+				\item Ember.js
+				\item iOS (Swift)
+			\end{itemize}
+		}
+		\cvitem{Backend Development}{\small
+			\begin{itemize}
+				\item Node.js
+				\item OAuth, JWT, etc.
+				\item MongoDB
+				\item ASP.NET MVC
+			\end{itemize}
+		}
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\cvitem{Dev Ops}{\small
+			\begin{itemize}
+				\item AWS, Azure Deployments
+				\item Docker
+				\item Chef
+				\item Octopus Deploy
+			\end{itemize}
+		}
+	\end{minipage}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
