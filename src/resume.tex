@@ -8,6 +8,14 @@
 \documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 \usepackage{helvet}
 \newcommand{\light}[1]{\textcolor{gray}{#1}}
+\newcommand{\lmr}{\fontfamily{lmr}\selectfont} % Latin Modern Roman
+\usepackage{catchfile}
+\newcommand{\getenv}[2][]{%
+  \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{}%
+	\if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
+\newcommand{\repo}[1]{%
+	\href{https://github.com/andrewbranch/resume/commit/#1}{#1}%
+}
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -128,6 +136,16 @@ I'm a frontend engineer with a passion for making other people's lives easier. I
 
 \section{Education}
 	\cventry{2010--2014}{Bachelor of Electrical Engineering}{Auburn University}{Auburn, AL}{}{}  % arguments 3 to 6 can be left empty
+
+\vspace*{\fill}
+
+\getenv[\COMMIT]{COMMIT}
+\newcommand{\commitURL}{https://github.com/andrewbranch/resume/commit/\COMMIT}
+\small
+\light{%
+Revision \repo{\COMMIT}\\
+This document is written in {\lmr \LaTeX}, built in Docker, and continuously deployed with Visual Studio Team Services.
+}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
