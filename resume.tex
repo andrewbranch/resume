@@ -1,4 +1,3 @@
-%% start of file `template.tex'.
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
@@ -8,6 +7,7 @@
 
 \documentclass[10pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 \usepackage{helvet}
+\newcommand{\light}[1]{\textcolor{gray}{#1}}
 
 
 % moderncv themes
@@ -55,79 +55,79 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 \vspace*{-2\baselineskip}
-
-\section{Education}
-	\cventry{2010--2014}{Bachelor of Electrical Engineering}{Auburn University}{Auburn, AL}{}{}  % arguments 3 to 6 can be left empty
+\raggedright
+I'm a frontend engineer with a passion for making other people's lives easier. I love designing APIs that are intuitive but powerful. Writing good documentation is an art I pursue. Technologies that let me write more expressive code excite me. I love collaborating and exchanging knowledge with others, and I'm constantly looking for a challenge.
 
 \section{Work Experience}
 	\cventry{July~2016--Present}{Software Engineer}{Microsoft}{San Francisco, CA}{}{
 	\begin{itemize}%
-		\item Built and designed APIs for dozens of React components forming the basis of VS Mobile Center's UI
-		\item Wrote detailed documentation, created example apps, and gave an online training to outline best practices for frontend architecture with React and CSS Modules
+		\item Built and designed APIs for a complete React component library forming the basis of Visual Studio App Center's UI
+		\item Pair programmed with feature teams to help them successfully integrate shared components into product code
+		\item Wrote API documentation and usage guides, created example apps, produced instructional videos, and gave online trainings to outline best practices for frontend architecture with React, MobX, and CSS Modules
+		\item Contributed to and authored several open-source packages focused on increasing developer productivity
+		\item Worked side-by-side with designers and product managers to deliver user-facing features
+		\item Owned App Center's frontend development experience, from keeping Webpack running fast to integrating an automated browser testing solution
 	\end{itemize}}
 
 	\cventry{March~2015--June~2016}{Full Stack Web Developer}{Xamarin}{San Francisco, CA}{}{
 	\begin{itemize}%
-		\item Create web apps enabling self-service updates to xamarin.com by various teams
-		\item Create and manage web infrastructure to improve scalability, reliability, performance, and developer workflow for sites with millions of visitors
-		\item Help lead Xamarin to an acquisition by Microsoft in March 2016
+		\item Created web apps enabling self-service updates to xamarin.com by various teams
+		\item Created and managed web infrastructure to improve scalability, reliability, performance, and developer workflow for sites with millions of visitors
+		\item Worked with the marketing team to track, optimize, and report on user acquisition and retention
+		\item Helped lead Xamarin to an acquisition by Microsoft in March 2016
 	\end{itemize}}
 
 	\cventry{October~2014--January~2015}{iOS + Web Developer}{Freelance work}{Pensacola, FL}{}{
 	\begin{itemize}%
-		\item Design and code a production-ready iPhone app for multiple screen sizes with Swift
-		\item Design an attractive icon set for use within the app
-		\item Use Node.js and Ember.js to build an interactive web application
+		\item Designed and built a production-ready iPhone app for multiple screen sizes with Swift
+		\item Designed an attractive icon set for use within the app
+		\item Used Node.js and Ember.js to build an admin web app for managing the iOS app's data
 	\end{itemize}}
 
 	\cventry{August~2013--May~2014}{Full Stack Web Developer}{Auburn University}{Auburn, AL}{}{
 		\begin{itemize}%
-			\item Interface with clients to generate list of technical requirements and project specifications
-			\item Write data-heavy web applications using C\# and the Microsoft's ASP.NET MVC framework
-			\item Leverage modern web technologies such as HTML5, JavaScript, and CSS3 to create attractive, intuitive, and responsive user interfaces
-		\end{itemize}}
-
-	\cventry{June~2013--October~2013}{Web Developer}{Freelance work}{Auburn, AL}{}{
-		\begin{itemize}%
-			\item Build dynamic and static sites with Ruby on Rails, HTML5, JavaScript, and CSS3
-			\item Incorporate external developer APIs from Google and Instagram
-			\item Create secure administrator management interfaces
-			\item Use source control and multiple environments to prevent data loss and provide smooth transitions between updates to live sites
+			\item Interfaced with clients to generate list of technical requirements and project specifications
+			\item Wrote data-heavy web applications using C\# and ASP.NET MVC
+			\item Leveraged HTML, JavaScript, and CSS to create intuitive and responsive user interfaces
 		\end{itemize}}
 
 \section{Key Skills}
-	\begin{minipage}[t]{0.6\textwidth}
-		\cvitem{Frontend Development}{\small
+	\begin{minipage}[t]{0.5\textwidth}
+		\cvitem{Frameworks~\& languages}{\small
 			\begin{itemize}
 				\item React
-				\item CSS Modules
-				\item Ember.js
-				\item iOS (Swift)
+				\item TypeScript
+				\item Redux
+				\item MobX
+				\item CSS \light{(modules, in-JS, Sass)}
 			\end{itemize}
 		}
-		\cvitem{Backend Development}{\small
+		\cvitem{Techniques~\& concepts}{\small
 			\begin{itemize}
-				\item Node.js
-				\item OAuth, JWT, etc.
-				\item MongoDB
-				\item ASP.NET MVC
+				\item Web accessibility
+				\item Unit \& snapshot testing \light{(Jest)}
+				\item Browser testing \light{(TestCafe, Puppeteer)}
+				\item Performance tuning
 			\end{itemize}
 		}
 	\end{minipage}
 	\begin{minipage}[t]{0.3\textwidth}
-		\cvitem{Dev Ops}{\small
+		\vspace{-38pt}
+		\cvitem{Dev ops}{\small
 			\begin{itemize}
-				\item AWS, Azure Deployments
+				\item Webpack \light{(speed, bundle splitting)}
+				\item VSTS pipelines
+				\item AWS, Azure deployments
 				\item Docker
-				\item Chef
-				\item Octopus Deploy
 			\end{itemize}
 		}
 	\end{minipage}
+
+\section{Education}
+	\cventry{2010--2014}{Bachelor of Electrical Engineering}{Auburn University}{Auburn, AL}{}{}  % arguments 3 to 6 can be left empty
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
@@ -145,9 +145,4 @@
 %\bibliographystylemisc{plain}
 %\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
-
-
-%% end of file `template.tex'.
