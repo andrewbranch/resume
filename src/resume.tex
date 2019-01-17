@@ -67,13 +67,14 @@
 \vspace*{-2\baselineskip}
 \renewcommand\labelitemi{\light{--}}
 \raggedright
-I'm a frontend engineer with a passion for making other people's lives easier. I love designing APIs that are intuitive but powerful. Writing good documentation is one of my highest priorities. Technologies that let me write more expressive code excite me. I love collaborating and exchanging knowledge with others, and I'm constantly looking for a challenge.
+I'm a software engineer with a passion for making other people's lives easier. I love designing APIs that are intuitive but powerful. Writing good documentation is one of my highest priorities. Technologies that let me write more expressive code excite me. I love collaborating and exchanging knowledge with others, and I'm constantly looking for a challenge.
 
 \section{Work Experience}
 	\cventry{July~2016--Present}{Software Engineer}{Microsoft}{San Francisco, CA}{}{
 	\begin{itemize}%
 		\item Built and designed APIs for a complete React component library forming the basis of Visual Studio App Center's UI
 		\item Pair programmed with feature teams to help them successfully integrate shared components into product code
+		\item Migrated multiple applications to Kubernetes
 		\item Wrote API documentation and usage guides, created example apps, produced instructional videos, and gave online trainings to outline best practices for frontend architecture with React, MobX, and CSS Modules
 		\item Contributed to and authored several open-source packages focused on increasing developer productivity
 		\item Worked side-by-side with designers and product managers to deliver user-facing features
@@ -118,7 +119,7 @@ I'm a frontend engineer with a passion for making other people's lives easier. I
 				\item Web accessibility
 				\item Unit \& snapshot testing \light{(Jest)}
 				\item Browser testing \light{(TestCafe, Puppeteer)}
-				\item Performance tuning
+				\item Performance tuning \light{(frontend web)}
 			\end{itemize}
 		}
 	\end{minipage}
@@ -127,8 +128,8 @@ I'm a frontend engineer with a passion for making other people's lives easier. I
 		\cvitem{Dev ops}{\small
 			\begin{itemize}
 				\item Webpack \light{(speed, bundle splitting)}
-				\item VSTS pipelines
-				\item AWS, Azure deployments
+				\item Azure Pipelines
+				\item Kubernetes
 				\item Docker
 			\end{itemize}
 		}
@@ -143,8 +144,8 @@ I'm a frontend engineer with a passion for making other people's lives easier. I
 \newcommand{\commitURL}{https://github.com/andrewbranch/resume/commit/\COMMIT}
 \small
 \light{%
-Revision \repo{\COMMIT}\\
-This document is written in {\lmr \LaTeX}, built in Docker, and continuously deployed with Visual Studio Team Services.
+Revision \repo{\COMMIT} (\today)\\
+This document is written in {\lmr \LaTeX}, built in Docker, and continuously deployed with Azure Pipelines.
 }
 
 % Publications from a BibTeX file without multibib
